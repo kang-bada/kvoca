@@ -1,26 +1,164 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>K-voca — daily vocabulary shorts</title><meta name="description" content="K-voca makes one-minute vocabulary videos with native pronunciation."><style>
-:root{--bg:#fbfaf6;--text:#1d2520;--muted:#5d6b62;--line:#dfe3dc;--accent:#1f4a36;--hl:#ffd45c;color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1712;--text:#e8eee9;--muted:#9aa89f;--line:#26352c;--accent:#9fe7c9}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:40px 20px 80px}
-header{display:flex;gap:14px;align-items:center;margin-bottom:28px}
-.logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(160deg,#24503b,#16301f);display:grid;place-items:center;font:900 20px/1 system-ui;color:#f4f1e8}
-.logo b{color:#ffd45c}
-header a{color:inherit;text-decoration:none;font-weight:800;font-size:20px}
-nav{margin-left:auto;display:flex;gap:16px;font-size:14px}nav a{color:var(--muted)}
-h1{font-size:28px;line-height:1.3;margin:0 0 6px}h2{font-size:19px;margin:32px 0 8px}
-.meta{color:var(--muted);font-size:14px;margin-bottom:24px}
-.ko{border-top:1px solid var(--line);margin-top:48px;padding-top:24px}
-ul{padding-left:22px}li{margin:4px 0}a{color:var(--accent)}
-table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
-td code{word-break:break-word;white-space:normal}code{font-size:13px}
-footer{margin-top:56px;color:var(--muted);font-size:13px}
-</style></head><body><div class="wrap">
-<header><div class="logo"><span>K<b>v</b></span></div><a href="index.html">K-voca</a><nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
-<h1>One minute a day, new words with native audio</h1>
-<p class="meta">English · Japanese · Chinese · Korean for learners · Beginner, intermediate and advanced</p>
-<p>K-voca is a small personal project that makes short vocabulary videos: a few words a day, each read by a native voice with its meaning and an example sentence. The videos are published on K-voca's own channels.</p>
-<p>The K-voca desktop tool is used only by its owner to publish K-voca's own videos to K-voca's own accounts. It is not offered to other users.</p>
-<ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
-<div class="ko"><h2>K-voca 는</h2><p>하루 1분, 원어민 발음으로 단어 몇 개를 익히는 짧은 영상을 만드는 개인 프로젝트입니다. K-voca 데스크톱 도구는 운영자 본인만 쓰며, K-voca 의 영상을 K-voca 의 계정에 올리는 데에만 쓰입니다.</p></div>
-<footer>K-voca · Contact: <a href="mailto:kvoca.daily@gmail.com">kvoca.daily@gmail.com</a></footer></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K-voca — one-minute vocabulary videos with native audio</title>
+<meta name="description" content="K-voca makes short daily vocabulary videos for English, Japanese, Chinese and Korean learners — native audio, meanings and example sentences, from beginner to advanced.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="K-voca — one-minute vocabulary videos">
+<meta property="og:description" content="Daily vocabulary shorts with native audio for English, Japanese, Chinese and Korean learners.">
+<meta property="og:image" content="https://kang-bada.github.io/kvoca/icon.png">
+<style>
+:root{--bg:#fbfaf6;--panel:#ffffff;--text:#1d2520;--muted:#5d6b62;--line:#dfe3dc;--accent:#1f4a36;--accent2:#24503b;--hl:#ffd45c;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1712;--panel:#16211a;--text:#e8eee9;--muted:#9aa89f;--line:#26352c;--accent:#9fe7c9;--accent2:#24503b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:800;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:9px;display:block}
+nav{margin-left:auto;display:flex;gap:18px;font-size:14px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--text)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 40px}
+.hero h1{font-size:44px;line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+.hero h1 b{background:linear-gradient(transparent 62%,var(--hl) 62%);font-weight:900}
+.hero p.lead{font-size:18px;color:var(--muted);margin:0 0 22px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 18px;border-radius:12px;font-weight:800;text-decoration:none;border:1px solid var(--line);color:var(--text)}
+.btn.primary{background:var(--accent2);color:#f4f1e8;border-color:var(--accent2)}
+.phones{display:flex;gap:12px;justify-content:center}
+.phones img{width:46%;max-width:230px;height:auto;border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.18);border:1px solid var(--line)}
+.phones img:nth-child(2){margin-top:34px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;line-height:1.25;margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card .tag{display:inline-block;font:800 12px/1 system-ui;padding:5px 8px;border-radius:999px;background:var(--hl);color:#1d2520;margin-bottom:10px}
+.card ul{margin:6px 0 0;padding-left:18px;font-size:14px;color:var(--muted)}
+.word{font-size:24px;font-weight:900;line-height:1.2}
+.read{color:var(--muted);font-size:14px}
+.mean{display:inline-block;margin-top:6px;background:var(--hl);color:#1d2520;font-weight:800;border-radius:8px;padding:2px 8px;font-size:14px}
+.ex{margin-top:10px;font-size:14px}.ex small{display:block;color:var(--muted)}
+.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
+.shots figcaption{font-size:13px;color:var(--muted);margin-top:6px;text-align:center}
+.steps{counter-reset:s}.steps .card{position:relative;padding-top:44px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:14px;left:18px;width:24px;height:24px;border-radius:50%;background:var(--accent2);color:#f4f1e8;font:800 13px/24px system-ui;text-align:center}
+.watch a{display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--text)}
+.watch a{flex-wrap:wrap;gap:2px 8px}.watch a span{color:var(--muted);font-size:14px}
+.grid>*{min-width:0}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:800}
+.ko{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+footer img{width:28px;height:28px;border-radius:7px}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:32px}.hero h1{font-size:34px}.g4,.g5{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}nav{display:none}}
+@media (max-width:480px){.g4,.g5{grid-template-columns:1fr 1fr}.watch.g4{grid-template-columns:1fr}.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="icon.png" alt="K-voca logo" width="36" height="36">K-voca</a>
+  <nav><a href="#learn">Languages</a><a href="#words">Sample words</a><a href="#how">How it works</a><a href="#watch">Watch</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+  <div>
+    <h1>New words in <b>one minute</b> a day, with native audio</h1>
+    <p class="lead">K-voca publishes short vocabulary videos for learners of English, Japanese, Chinese and Korean. Every video shows the word, its pronunciation and meaning, and a real example sentence — read aloud by a native-sounding voice.</p>
+    <div class="cta"><a class="btn primary" href="#watch">Watch K-voca</a><a class="btn" href="#words">See today's words</a></div>
+  </div>
+  <div class="phones"><img src="img/en-i.jpg" alt="K-voca English video: cellphone" width="540" height="960"><img src="img/ja-i.jpg" alt="K-voca Japanese video: 適度" width="540" height="960"></div>
+</div>
+
+<section id="learn">
+  <h2>Four languages, three levels</h2>
+  <p class="sub">Each language has its own daily series. Words follow well-known learner lists, so you build vocabulary in a sensible order.</p>
+  <div class="grid g4">
+    <div class="card"><span class="tag">English</span><h3>For Korean speakers</h3><ul><li>Beginner — everyday core words (NGSL)</li><li>Intermediate — TOEIC words</li><li>Advanced — high-score TOEIC &amp; nuance</li></ul></div>
+    <div class="card"><span class="tag">Japanese</span><h3>JLPT path</h3><ul><li>Beginner — N5 · N4</li><li>Intermediate — N3</li><li>Advanced — N2 · N1</li></ul></div>
+    <div class="card"><span class="tag">Chinese</span><h3>HSK path</h3><ul><li>Beginner — HSK 1 · 2</li><li>Intermediate — HSK 3 · 4</li><li>Advanced — HSK 5 · 6</li></ul></div>
+    <div class="card"><span class="tag">Korean</span><h3>For learners of Korean</h3><ul><li>TOPIK beginner to advanced</li><li>Meanings in English</li><li>Vietnamese edition (EPS-TOPIK basics)</li></ul></div>
+  </div>
+</section>
+
+<section id="words">
+  <h2>From this week's videos</h2>
+  <p class="sub">A few real entries from K-voca videos published in late October 2026.</p>
+  <div class="grid g4">
+    <div class="card"><div class="read">English · TOEIC</div><div class="word">refund</div><div class="read">/ˈriːfʌnd/</div><span class="mean">환불</span><div class="ex">You can get a refund within 30 days.<small>30일 안에 환불 가능해요.</small></div></div>
+    <div class="card"><div class="read">Japanese · N3</div><div class="word">適度</div><div class="read">てきど · tekido</div><span class="mean">적당</span><div class="ex">ユイ「散歩は適度にしよう」<small>유이는 산책은 적당히 하자고 말했어</small></div></div>
+    <div class="card"><div class="read">Chinese · HSK 3</div><div class="word">需要</div><div class="read">xūyào</div><span class="mean">필요</span><div class="ex">小美说她需要一杯咖啡。<small>샤오메이는 커피 한 잔이 필요하대요.</small></div></div>
+    <div class="card"><div class="read">Korean · beginner</div><div class="word">지금</div><div class="read">jigeum</div><span class="mean">now</span><div class="ex">지금 가요.<small>I am going now.</small></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>What a video looks like</h2>
+  <p class="sub">Vertical one-minute videos, designed differently for each level.</p>
+  <div class="grid g5 shots">
+    <figure style="margin:0"><img src="img/en-b.jpg" alt="Beginner flashcard video" loading="lazy" width="540" height="960"><figcaption>Beginner · flashcards</figcaption></figure>
+    <figure style="margin:0"><img src="img/en-i.jpg" alt="Intermediate chalkboard video" loading="lazy" width="540" height="960"><figcaption>Intermediate · example sentences</figcaption></figure>
+    <figure style="margin:0"><img src="img/en-a.jpg" alt="Advanced nuance video" loading="lazy" width="540" height="960"><figcaption>Advanced · nuance &amp; quiz</figcaption></figure>
+    <figure style="margin:0"><img src="img/ja-i.jpg" alt="Japanese video" loading="lazy" width="540" height="960"><figcaption>Japanese · reading in kana</figcaption></figure>
+    <figure style="margin:0"><img src="img/ko-b.jpg" alt="Korean video" loading="lazy" width="540" height="960"><figcaption>Korean · repeat after me</figcaption></figure>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How each video is made</h2>
+  <p class="sub">K-voca is a small personal project. Its owner runs a desktop tool that prepares and publishes the videos to K-voca's own channels.</p>
+  <div class="grid g4 steps">
+    <div class="card"><h3>Pick words</h3><p>Words come from open learner lists (NGSL, TOEIC lists, JLPT, HSK, TOPIK), in order, without repeats.</p></div>
+    <div class="card"><h3>Check meaning</h3><p>Meanings, readings and example sentences are written with AI help, then checked against dictionaries and rules.</p></div>
+    <div class="card"><h3>Record &amp; render</h3><p>An AI text-to-speech voice reads every word and sentence; the video is drawn frame by frame.</p></div>
+    <div class="card"><h3>Review &amp; publish</h3><p>The owner reviews each video, then publishes it to K-voca's YouTube, TikTok, Instagram, Facebook and Threads.</p></div>
+  </div>
+</section>
+
+<section id="watch">
+  <h2>Watch K-voca</h2>
+  <p class="sub">New videos every day.</p>
+  <div class="grid g4 watch">
+    <div class="card"><a href="https://www.youtube.com/channel/UCzrHJ8025qQi2BD5ZBdCXqg" rel="noopener">YouTube <span>Shorts ↗</span></a></div>
+    <div class="card"><a href="https://www.instagram.com/kvoca.daily/" rel="noopener">Instagram <span>@kvoca.daily ↗</span></a></div>
+    <div class="card"><a href="https://www.threads.com/@kvoca.daily" rel="noopener">Threads <span>@kvoca.daily ↗</span></a></div>
+    <div class="card"><a href="https://www.facebook.com/1488447354348918" rel="noopener">Facebook <span>K-voca Daily ↗</span></a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+  <details><summary>Is K-voca free?</summary><p>Yes. All videos are free to watch on K-voca's channels.</p></details>
+  <details><summary>Are the voices real people?</summary><p>No. K-voca uses AI text-to-speech voices that sound native. We say so honestly in every video description.</p></details>
+  <details><summary>Can I use the K-voca desktop tool?</summary><p>No. The tool is used only by K-voca's owner to publish K-voca's own videos to K-voca's own accounts. It does not offer sign-up or log-in for other users and does not access anyone else's accounts.</p></details>
+  <details><summary>What data does K-voca collect?</summary><p>K-voca does not collect data from viewers. When connected to a platform (for example TikTok or YouTube), the tool only uses the owner's own account to upload videos and read the owner's own video statistics. See the <a href="privacy.html">Privacy Policy</a>.</p></details>
+  <details><summary>I found a mistake in a video.</summary><p>Thank you! Please leave a comment or email <a href="mailto:kvoca.daily@gmail.com">kvoca.daily@gmail.com</a>.</p></details>
+</section>
+
+<section>
+  <div class="ko" lang="ko">
+    <h2>K-voca 는</h2>
+    <p>하루 1분, 원어민 발음(AI 음성)으로 단어 몇 개와 예문을 익히는 짧은 영상을 매일 올리는 개인 프로젝트입니다. 영어(토익) · 일본어(JLPT) · 중국어(HSK) · 외국인을 위한 한국어(TOPIK)를 초급 · 중급 · 고급으로 나눠 올립니다.</p>
+    <p>K-voca 데스크톱 도구는 운영자 본인만 쓰며, K-voca 의 영상을 K-voca 의 계정에 올리고 그 계정의 통계를 보는 데에만 쓰입니다. 다른 사람의 계정이나 정보에는 접근하지 않습니다. 문의: <a href="mailto:kvoca.daily@gmail.com">kvoca.daily@gmail.com</a></p>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <img src="icon.png" alt="" width="28" height="28"><b>K-voca</b>
+  <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="mailto:kvoca.daily@gmail.com">kvoca.daily@gmail.com</a>
+  <span style="margin-left:auto">© 2026 K-voca</span>
+</div></footer>
+</body>
+</html>
